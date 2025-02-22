@@ -1,8 +1,3 @@
-/* Nama File    : Titik.java
-Deskripsi       : berisi atribut dan method dalam class Titik
- Pembuat        : Shakila Tungga Dewi
-Tanggal         : 20 Februari 2025 */
-
 public class MTitik {
     public static void main(String[] args){
         Titik T1 = new Titik();
@@ -23,7 +18,7 @@ public class MTitik {
         T1.printTitik();
 
         System.out.println("Jumlah Objek Titik = " + Titik.getCounterTitik());
-        System.out.println("Jumlah Objek Titik = "+ T2.getCounterTitik());
+        // System.out.println("Jumlah Objek Titik = "+ T2.getCounterTitik());
 
         System.out.println("Kuadaran dari T1 = "+T1.getKuadran());
         System.out.println("Jarak T1 dengan titik pusat = " + T1.getJarakPusat());
@@ -49,5 +44,5 @@ public class MTitik {
         System.out.println("titik baru hasil refleksi T1 terhadap sb.Y = ");
         refleksiY.printTitik();
         
-    }
+    }    
 }

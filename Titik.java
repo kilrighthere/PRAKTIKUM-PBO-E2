@@ -1,8 +1,3 @@
-/* Nama File    : Titik.java
-Deskripsi       : berisi atribut dan method dalam class Titik
- Pembuat        : Shakila Tungga Dewi
-Tanggal         : 20 Februari 2025 */
-
 public class Titik {
     /* ATRIBUT */
     double absis;
@@ -12,11 +7,11 @@ public class Titik {
     /* METHOD */
     // kontruktor untuk membuat titik
 
-    Titik() {
-        absis = 0;
-        ordinat = 0;
-        counterTitik++;
-    }
+    // Titik() {
+    //     absis = 0;
+    //     ordinat = 0;
+    //     counterTitik++;
+    // }
     
     Titik(){
         this (0,0);
@@ -35,7 +30,7 @@ public class Titik {
 
     //counter titik dengan this untuk objek
     void printCounterTitik(){
-        System.out.println(this.counterTitik);
+        System.out.println(counterTitik);
     }
 
     // mengembalikan nilai absis
@@ -123,6 +118,5 @@ public class Titik {
         T.absis = absis * (-1);
         T.ordinat = ordinat;
         return T;
-        }
- }
- 
+        }    
+}
