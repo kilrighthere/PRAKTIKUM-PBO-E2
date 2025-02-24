@@ -1,21 +1,40 @@
+/* Nama File    : Titik.java */
+/* Deskripsi    : berisi main program class Titik*/
+/* Pembuat      : Shakila Tungga Dewi*/
+/* Tanggal      : 20 Februari 2025*/
+
+
 public class MTitik {
     public static void main(String[] args){
+        // membuat objek Titik baru T1
         Titik T1 = new Titik();
+
+        // mengeset absis T1
         T1.setAbsis (3);
+
+        // mengeset ordinat T1
         T1.setOrdinat(4);
+
+        // menampilkan titik T1 
+        System.out.print("Menampilkan Titik T1 : ");
         T1.printTitik();
+
+        // Menggeser titik T1 sejauh x dan y
         T1.geser(3, 4);
+        System.out.println("Menampilkan titik T1 setelah dilakukan penggeseran");
         T1.printTitik();
 
         // Obeject Reference
+        // membuat objek baru T2
         Titik T2 = T1;
         T2.printTitik();
         T1.setAbsis(10);
         T1.setOrdinat(10);
         T2.printTitik();
 
+        // membuat objek baru T3
         Titik T3 = new Titik(3,4);
-        T1.printTitik();
+        T3.printTitik();
 
         System.out.println("Jumlah Objek Titik = " + Titik.getCounterTitik());
         // System.out.println("Jumlah Objek Titik = "+ T2.getCounterTitik());
