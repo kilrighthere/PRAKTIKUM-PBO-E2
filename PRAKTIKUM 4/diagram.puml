@@ -1,0 +1,37 @@
+@startuml diagram
+class BangunDatar {
+    - int jmlSisi
+    - String warna
+    - String border
+    + BangunDatar()
+    + getJmlSisi() : int
+    + setJmlSisi(sisi : int) : void
+    + getWarna() : String
+    + setWarna(warna : String) : void
+    + getBorder() : String
+    + setBorder(border : String) : void
+    + printInfo() : void
+}
+class Persegi {
+    - double sisi
+    + Persegi()
+    + Persegi (sisi : double, warna : String, border : String)
+    + getSisi() : double
+    + setSisi(sisi : double) : void
+    + getLuas() : double
+    + getKeliling() : double
+    + getDiagonal() : double
+}
+class Lingkaran{
+    - jari : double
+    + Lingkaran()
+    + Lingkaran(diameter : double, warna : String, border : String)
+    + getJari() : double
+    + setJari(jari : double) : void
+    + getLuas() : double
+    + getKeliling() : double
+}
+Persegi --|> BangunDatar
+Lingkaran --|>  BangunDatar
+
+@enduml

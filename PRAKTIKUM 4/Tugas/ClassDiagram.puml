@@ -1,0 +1,69 @@
+@startuml ClassDiagram
+class Pegawai{
+    - String NIP
+    - String name
+    - LocalDate birthDate
+    - LocalDate TMT
+    - double gajiPokok
+    + Pegawai()
+    + Pegawai(NIP : String, name : String, birthDate : LocalDate, TMT : LocalDate, gajiPokok : double)
+    + getNIP():String
+    + setNIP(NIP : String):void
+    + getName() : String
+    + setName(name:String): void
+    + getBirthDate(): LocalDate
+    + setBirthDate(year : int, month : int, day : int) : void
+    + getTMT():LocalDate
+    + setTMT(year : int, month : int, day : int) : void
+    + getGajiPokok():double
+    + setGajiPokok(gajiPokok : double) : void
+    + masaKerja():String
+    + getYearMasaKerja() : int
+    + printInfo() : void
+}
+
+class DosenTetap{
+    - String NIDN
+    - String Fakultas
+    + DosenTetap()
+    + DosenTetap(NIP : String, NIDN : String, name : String, birthDate : LocalDate, TMT : LocalDate, gajiPokok : double, Fakultas : String)
+    + getNIDN() : String
+    + setNIDN(NIDN : String) : void
+    + getFakultas(): String
+    + setFakultas(Fakultas : String): void
+    + BUP() : LocalDate
+    + Tunjangan() : String
+    + Jabatan() : String
+    + printInfo() : void <<override>>
+}
+
+class DosenTamu{
+    - String NIDK
+    - String Fakultas
+    + DosenTamu()
+    + DosenTamu(NIP : String, NIDK : String, name : String, birthDate : LocalDate, TMT : LocalDate, gajiPokok : double, Fakultas : String)
+    + getNIDK() : String
+    + setNIDK(NIDK : String) : void
+    + getFakultas(): String
+    + setFakultas(Fakultas : String): void
+    + BUP() : LocalDate
+    + Tunjangan() : String
+    + Jabatan() : String
+    + printInfo() : void <<override>>
+}
+
+class Tendik{
+   - String bidang
+   + Tendik()
+   + Tendik(NIP : String, name : String, birthDate : LocalDate, TMT : LocalDate, gajiPokok : double, bidang : String)
+   + getBidang() : String
+   + setBidang(bidang : String) : void
+   + BUP() : LocalDate
+   + Tunjangan(): String
+   + printInfo() : void <<override>>
+}
+Pegawai "1" <|-- "1" Tendik : Has a
+Pegawai "1" <|-- "1" DosenTetap : Has a
+Pegawai "1" <|-- "1" DosenTamu : Has a
+
+@enduml
